@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --button-background: orange;
+    --button-hover: rgb(45, 156, 110);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    background-image: url("/img/jamakassi-wejxKZ-9IZg-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 130px 0;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header * {
+    z-index: 1;
+}
+
+header h1 {
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+form {
+    position: relative;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+form input {
+    width: 100%;
+    border: 0;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 16px;
+}
+
+form button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: var(--button-background);
+    color: #fff;
+    border: 0;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 13px 30px;
+}
+
+form button:hover,
+.btn:hover {
+    background-color: var(--button-hover);
+}
+
+.container p {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.btn {
+    background-color: var(--button-background);
+    border: 0;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0px 5px;
+}
+
+.container {
+    margin: 30px auto;
+    width: 700px;
+}
+
+ul.songs {
+    list-style-type: none;
+}
+
+ul.songs li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.lyrics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
