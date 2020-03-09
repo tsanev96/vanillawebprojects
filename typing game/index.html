@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="rules-button" id="rules-button">Rules</button>
+
+    <div class="rules" id="rules">
+        <p>Your goal is to type the given word, every 5th word you are allowed to use the add 5 seconds button</p>
+        <p>If the letters don't match the border of the input will become red, otherwise orange</p>
+        <h2>Good Luck!</h2>
+        <button class="close-button" id="close-button">Close</button>
+    </div>
+
+    <div class="settings" id="settings">
+        <form id="settings">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </form>
+    </div>
+
+    <div class="container-game">
+        <h1>Typing Game</h1>
+
+        <div class="word-container">
+            <span>Type the following:</span>
+            <h2 id="given-word"></h2>
+            <input type="text" placeholder="Enter the word here.." id="input">
+        </div>
+
+        <div class="container-results">
+            <div class="score-container">
+                <div>Score</div>
+                <span id="score">0</span>
+            </div>
+
+            <div class="timer-container">
+                <div>Timer</div>
+                <span id="timer">10s</span>
+            </div>
+
+            <div class="guessed-words-container">
+                <div>Words</div>
+                <span id="guessed-words">0</span>
+            </div>
+
+            <div class="characters-container">
+                <div>Characters</div>
+                <span id="characters">0</span>
+            </div>
+        </div>
+        <!--
+ <div class="add-seconds-container">
+            <button id="add-seconds-button">Add 5s</button>
+        </div>
+-->
+    </div>
+
+    <div class="end-game-container" id="end-game-container">
+    </div>
+
+</body>
+
+</html>
