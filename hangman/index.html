@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <p>Enter a letter to start the game</p>
+
+    <div class="game-container">
+        <svg width="200" height="300" class="figure-container">
+            <!-- Rod -->
+            <line x1='30' y1='300' x2='90' y2='300' />
+            <line x1='60' y1='300' x2='60' y2='70' />
+            <line x1='60' y1='70' x2='150' y2='70' />
+            <line x1='150' y1='70' x2='150' y2='100'/>
+
+            <!-- Head -->
+            <circle cx='150' cy='130' r='30' class='figure-parts'/>
+            <line x1="135" y1="120" x2="145" y2="130" class="figure-face"/>
+            <line x1="145" y1="120" x2="135" y2="130" class="figure-face"/>
+            <line x1="165" y1="120" x2="155" y2="130" class="figure-face"/>
+            <line x1="155" y1="120" x2="165" y2="130" class="figure-face"/>
+            <line x1="145" y1="150" x2="155" y2="150" class="figure-face"/>
+
+            
+            <!-- Body -->
+            <line x1='150' y1='160' x2='150' y2='230' class='figure-parts'/>
+            <line x1='150' y1='170' x2='130' y2='210' class='figure-parts'/>
+            <line x1='150' y1='170' x2='170' y2='210' class='figure-parts'/>
+            <line x1='150' y1='230' x2='130' y2='270' class='figure-parts'/>
+            <line x1='150' y1='230' x2='170' y2='270' class='figure-parts'/>
+
+        </svg>
+
+        <div class="word-container" id="word">
+        </div>
+
+        <div class="wrong-letters-container" id="wrong-letters">
+        </div>
+        <button class="hint-button" id="hint-button">Hint</button>
+
+    </div>
+
+
+    <div class="game-finished-container" id="game-finished">
+        <div class="game-finished">
+            <h2 id="final-message"></h2>
+            <h3 id="reveal-word"></h3>
+            <button id="play-button">Play Again</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <p>You have already entered this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
